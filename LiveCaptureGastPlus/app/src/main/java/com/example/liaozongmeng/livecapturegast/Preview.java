@@ -51,30 +51,30 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         }
     }
 
-//    public void switchCamera(Camera camera) {
-//        setCamera(camera);
-//        try {
-//            camera.setPreviewDisplay(mHolder);
-//        } catch (IOException exception) {
-//            Log.e(TAG, "IOException caused by setPreviewDisplay()", exception);
-//        }
-//        if (mSupportedPreviewSizes != null) {
-//            mPreviewSize = getOptimalPreviewSize(mSupportedPreviewSizes,
-//                    getMeasuredWidth(), getMeasuredHeight());
-//        }
-//        Camera.Parameters parameters = camera.getParameters();
-//        parameters.setPreviewSize(mPreviewSize.width, mPreviewSize.height);
-//        requestLayout();
-//
-//        try
-//        {
-//            camera.setParameters(parameters);
-//        }
-//        catch (RuntimeException e)
-//        {
-//            Log.e(TAG, "error setting parameters", e);
-//        }
-//    }
+    public void switchCamera(Camera camera) {
+        setCamera(camera);
+        try {
+            camera.setPreviewDisplay(mHolder);
+        } catch (IOException exception) {
+            Log.e(TAG, "IOException caused by setPreviewDisplay()", exception);
+        }
+        if (mSupportedPreviewSizes != null) {
+            mPreviewSize = getOptimalPreviewSize(mSupportedPreviewSizes,
+                    getMeasuredWidth(), getMeasuredHeight());
+        }
+        Camera.Parameters parameters = camera.getParameters();
+        parameters.setPreviewSize(mPreviewSize.width, mPreviewSize.height);
+        requestLayout();
+
+        try
+        {
+            camera.setParameters(parameters);
+        }
+        catch (RuntimeException e)
+        {
+            Log.e(TAG, "error setting parameters", e);
+        }
+    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {

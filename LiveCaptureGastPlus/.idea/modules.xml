@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LiveCaptureGast.iml" filepath="$PROJECT_DIR$/LiveCaptureGast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LiveCaptureGastPlus_orientation.iml" filepath="$PROJECT_DIR$/LiveCaptureGastPlus_orientation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
